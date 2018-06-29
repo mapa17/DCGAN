@@ -19,10 +19,10 @@ Train a model on images in ./training_data for 200000 training cycles with a bat
 > Note: Use the option --keep-checkpoints to keep intermediate trained models
 
 ## Image generation
-Use a pre trained network in **newgen/ckpt-10000/dcgan.ckpt** and generate 50 new images, storing them in **./newlycreated**.
+Use a pre trained network in **trained_models/dcgan-200000** and generate 50 new images, storing them in **./newlycreated**.
 
 ```bash
-python GANcontrol.py generate newgen/ckpt-10000/dcgan.ckpt 50 ./newlycreated
+python GANcontrol.py generate trained_models/dcgan-200000 50 ./newlycreated
 ```
 
 > Note: use the option --overview to generate a single figure containing NxN pictures
