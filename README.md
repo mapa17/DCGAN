@@ -1,4 +1,4 @@
-# Exercise
+# Deep Convolutional GAN 
 In this exercise we have to create a GAN that generates images of melanoma similar
 to [isic-archive](https://isic-archive.com).
 
@@ -107,3 +107,42 @@ python img2dist.py embedding --group --group-labels --limits 2.0 color_distance_
 ```
 
 > Note: One can define the limits of the plot using  *--limits 2.0*
+
+## Evaluate img2dist
+In order to evaluate if img2dist can produce useful distance measures and embedding,
+we tried to generate a distance plot of six groups of images.
+
+Groups S1-S5 have been produced by taking 5 random pictures from the training set, and
+using image augmentation generating 10 variations of each.
+
+The group **OtherStuff** is a set of 4 images chosen from the internet that contain
+different objects than the isic dataset.
+
+The result shows a clear clustering, where images of the same group (S1-S5) are
+closer to each other than to other groups, and unrelated images from **OtherStuff**
+is far apart from the rest.
+
+![img2dist proof of concept](img2dist_experiment/color_distance.jpg)
+
+## Image diversity of DCGAN generated images
+Finally we tested the image diversity of pictures generated with the DCGAN,
+tracking the pictures generated during multiple steps of the training process.
+
+![DCGAN image diversity](img2dist_experiment/image_diversity_short/image_diversity_with_training_data.jpg)
+
+Interpreting the results, one can see a clear difference between images generated
+at the beginning (group dcgan-0) and later stages of training (dcgan-10000 til dcgan-99999).
+
+Between the trained groups (dcgan-10000 til dcgan-99999) there is no obvious pattern
+emerging, and the share similar in group as between group distances, although qualitatively,
+the images differ strongly
+
+In addition there seems to be a systematic shift in all trained images from the
+training set, showing the most of the training images are not overlapping with the
+generated image clusters. Judging by the spread of points from the training set, 
+there seems to be more image diversity in the training set than in the generated
+image sets at any time during training.
+
+
+# Todo
+* Quantify cluster metrics (like mean spread) in the MDS embedding containing all groups.
