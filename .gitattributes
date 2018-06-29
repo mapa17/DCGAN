@@ -1,1 +1,16 @@
 trained_models/ filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-0.meta filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-10000.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-200000.index filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-450000.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-99999.index filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-99999.meta filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-0.index filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-10000.meta filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-200000.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-200000.meta filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-99999.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-0.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-10000.index filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-450000.index filter=lfs diff=lfs merge=lfs -text
+trained_models/dcgan-450000.meta filter=lfs diff=lfs merge=lfs -text
