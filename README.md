@@ -2,6 +2,13 @@
 In this exercise we have to create a GAN that generates images of melanoma similar
 to [isic-archive](https://isic-archive.com).
 
+> Note: The repository contains the trained models which are huge (~4GB) if you want to
+> skip their download run:
+
+```bash
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/mapa17/DCGAN.git
+```
+
 This repository contains the following tools
 * **[isic_dataset](#isic_dataset)** a tool to download, resize and augment images from the isic-archive
 * **[GANcontrol](#GANcontrol)** used to train GAN's, generate images with pre trained models, and continue training models
